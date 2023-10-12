@@ -4,8 +4,8 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.equalTo;
+
 
 class MobileBankApiTestV1 {
     @Test
@@ -21,7 +21,7 @@ class MobileBankApiTestV1 {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("url", is("https://postman-echo.com/post"))
+                .body("url", equalTo("https://postman-echo.com/post"))
                 .contentType(ContentType.JSON)
         ;
     }
