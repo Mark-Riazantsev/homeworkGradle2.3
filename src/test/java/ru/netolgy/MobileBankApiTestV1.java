@@ -22,7 +22,7 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(200)
                 .body("url", equalTo("https://postman-echo.com/post"))
-                .contentType(ContentType.XML)
+                .contentType(ContentType.JSON)
         ;
     }
 
